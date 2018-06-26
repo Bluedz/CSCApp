@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>菜单-大众项目-{{plant}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="main-back" padding>
+  <ion-grid>
+    <ion-row *ngFor = "let menu of menuList; let i = index">
+        <ion-col>
+            <div class="menuDiv{{i + 1}}" (click)="goTo($event, menu)">
+              <span class="menuText">{{menu.MMC_NAME}}</span>
+            </div>
+        </ion-col> 
+
+    </ion-row>
+    <!-- /0322 按陈旭要求-打开月度报表 
+    <ion-row>
+      <ion-col>
+        <div class="menuDiv7" (click)="openChXtables()">
+          <span class="menuText">打开月度报表</span>
+        </div>
+      </ion-col>
+    </ion-row>
+     0322 按陈旭要求-打开月度报表/ -->
+  </ion-grid>
+</ion-content>

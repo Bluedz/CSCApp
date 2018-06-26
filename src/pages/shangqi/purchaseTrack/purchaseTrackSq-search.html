@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>高级查询</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content class="search-content">
+    <ion-list padding>
+      <div>
+        <ion-label stacked>申购号</ion-label>
+        <ion-textarea placeholder="请输入申购单号" [(ngModel)]="filters.applyCode"></ion-textarea>
+      </div>
+      <div>
+        <ion-label stacked>SETECH物料号</ion-label>
+        <ion-textarea placeholder="请输入SETECH物料号" [(ngModel)]="filters.sdsCode"></ion-textarea>
+      </div>
+      <div>
+        <ion-label stacked>描述</ion-label>
+        <ion-textarea placeholder="请输入描述" [(ngModel)]="filters.maDesc"></ion-textarea>
+      </div>
+            <!--:-->
+            <div>
+              <ion-label stacked class="datetime-label">批准日期</ion-label>
+              <ion-item>
+                <ion-label>起始日期：</ion-label> 
+                <ion-datetime displayFormat='YYYY年MM月DD日' placeholder="请输入描述" [(ngModel)]="filters.approveDateStart"></ion-datetime>
+              </ion-item>
+              <ion-item>
+                  <ion-label>截至日期：</ion-label> 
+                  <ion-datetime displayFormat='YYYY年MM月DD日' placeholder="请输入描述" [(ngModel)]="filters.approveDateEnd"></ion-datetime>
+              </ion-item>
+              <ion-label stacked >* 需指定某日期时，请任选以上两项其一填写</ion-label>
+            </div>
+            <!--:-->
+    </ion-list>
+    <div padding>
+      <button ion-button block (click)="adSearch()">搜索</button>
+    </div>
+  </ion-content>
