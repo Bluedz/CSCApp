@@ -14,7 +14,7 @@ import { App } from 'ionic-angular';
 })
 export class AboutPage {
 
-  private currentVersion: String = "0.1.5";
+  private currentVersion: String = "2.0.0";
 
   constructor(public navCtrl: NavController, private appService: AppService, private events: Events, private platfrom: Platform,private app:App) {
     if (this.platfrom.is("cordova")) {
