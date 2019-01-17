@@ -28,15 +28,15 @@ export class plantComponent {
   }
 
   appcodeview(event,plant) {
-    if(this.project=="大众项目"){
+    if(this.project=="上汽大众项目"){
       this.navCtrl.push(HomeComponent,{
         plant: plant
       });
-    } else if (this.project == '上汽项目') {
+    } else if (this.project == '上汽乘用车项目') {
       this.navCtrl.push(SHomeComponent,{
         plant: plant
       });
-    } else if (this.project == '通用项目') {
+    } else if (this.project == '上汽通用项目') {
       this.navCtrl.push(THomeComponent,{
         plant: plant
       });
