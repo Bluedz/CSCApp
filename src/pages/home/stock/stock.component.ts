@@ -90,9 +90,9 @@ export class StockComponent {
     if (sdsCode != '' && sdsCode != undefined) {
       filter += " and STO_SDSMETERIALNO like '%" + sdsCode + "%'";
     }
-
+    
     let maDesc = this.filters.maDesc;
-    if (maDesc != '' && maDesc != undefined) {
+/*     if (maDesc != '' && maDesc != undefined) {
       if (maDesc.indexOf('@') > -1) {
         filter += " and MAT_REMARK like '%";
         let attrs: String[] = maDesc.split('@');
@@ -100,6 +100,19 @@ export class StockComponent {
           filter += attr + "%";
         }
         filter += "'";
+      } else {
+        filter += " and MAT_REMARK like '%" + maDesc + "%'";
+      }
+    } */
+
+    if (maDesc != '' && maDesc != undefined) {
+      if (maDesc.indexOf(' ') > -1) {
+        //filter += " and MAT_REMARK like '%";
+        let attrs: String[] = maDesc.split(' ');
+        for (var attr of attrs) {
+          filter += " and MAT_REMARK like '%" + attr + "%'";
+        }
+        //filter += "'";
       } else {
         filter += " and MAT_REMARK like '%" + maDesc + "%'";
       }

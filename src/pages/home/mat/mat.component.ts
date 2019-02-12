@@ -58,8 +58,8 @@ export class MatComponent {
       filter += " and MAT_MATERIALNO like '%" + sdsCode + "%'";
     }
 
-    let maDesc = this.filters.maDesc;
-    if (maDesc != '' && maDesc != undefined) {
+     let maDesc = this.filters.maDesc;
+/*    if (maDesc != '' && maDesc != undefined) {
       if (maDesc.indexOf('@') > -1) {
         filter += " and MAT_REMARK like '%";
         let attrs: String[] = maDesc.split('@');
@@ -70,8 +70,21 @@ export class MatComponent {
       } else {
         filter += " and MAT_REMARK like '%" + maDesc + "%'";
       }
-    }
+    } */
 
+
+if (maDesc != '' && maDesc != undefined) {
+  if (maDesc.indexOf(' ') > -1) {
+    //filter += " and MAT_REMARK like '%";
+    let attrs: String[] = maDesc.split(' ');
+    for (var attr of attrs) {
+      filter += " and MAT_REMARK like '%" + attr + "%'";
+    }
+    //filter += "'";
+  } else {
+    filter += " and MAT_REMARK like '%" + maDesc + "%'";
+  }
+}
     var _param = {
       "bizObj": "CSC_MATERIAL",
       "service": "selectMore",
