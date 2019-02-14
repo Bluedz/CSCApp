@@ -17,7 +17,8 @@
 1. 首先要生成签名文，命令为： ... ，这里结果是dccsc.jks
 2.  工程目录/platforms/android目录下新建名为release-signing.properties的文件
 3. release-signing.properties 的内容添加以下4行：
-	```storeFile = dccsc.jks
+	```
+	storeFile = dccsc.jks
 	keyAlias=cscapp
 	storePassword=wzg13852286548
 	keyPassword=wzg13852286548
