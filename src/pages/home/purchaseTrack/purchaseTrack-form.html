@@ -27,7 +27,9 @@
       <label>申购单类型:</label>
       <span>{{purchaseTrack.applyType}}</span>
     </div>
-    <div>
+    <div (click)="go2MatDetail(purchaseTrack.sdsCode)" 
+    style="background: linear-gradient(to right, rgba(240,255,255,0), rgba(24,255,255,1)); ">
+    <!-- border-radius:10px;"> -->
       <img src="assets/icon/small/3.png">
       <label>SETECH物料号:</label>
       <span>{{purchaseTrack.sdsCode}}</span>
