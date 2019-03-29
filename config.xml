@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.stk.csc" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.stk.csc" version="2.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>数据跟踪</name>
   <description>An awesome Ionic/Cordova app.</description>
   <author email="zhaoyuheng@setechchina.com" href="http://ionicframework.com/">zhaoyuheng</author>

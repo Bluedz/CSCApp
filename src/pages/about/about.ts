@@ -14,7 +14,7 @@ import { App } from 'ionic-angular';
 })
 export class AboutPage {
 
-  private currentVersion: String = "2.0.0";
+  private currentVersion: String = "2.1.0";
 
   constructor(public navCtrl: NavController, private appService: AppService, private events: Events, private platfrom: Platform,private app:App) {
     if (this.platfrom.is("cordova")) {
@@ -46,7 +46,7 @@ export class AboutPage {
 
   public popHelp (){
     //this.navCtrl.pop();
-    alert("微信端CSC查询工具");
+    alert("移动端CSC查询工具");
   }
 
 
